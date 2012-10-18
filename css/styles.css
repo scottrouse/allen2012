@@ -1,11 +1,65 @@
 /* ============================== */
 /* ! Layout for desktop version   */
 /* ============================== */
+/*
 
 	body {
-		
+		background: url(../img/bg.jpg);
+		background-size: 100%;
+		background-attachment: fixed;
 	}
-	
+*/
+
+#page {
+  background-color: #003373;
+}
+
+#logo {
+  display: block;
+  overflow: hidden;
+  background: url(../img/logo.png) no-repeat;
+  text-indent: -9999px;
+  background-size: contain;
+  width: 100%;
+  height: 96px;
+}
+
+
+nav.inline ul {
+  list-style: none;
+}
+
+nav.inline ul li {
+  float: left;
+  margin: 1em;
+}
+
+
+.border {
+  border: 1px solid gray;
+}
+
+
+
+.feature1 {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.feature1 img {
+  margin: 0;
+  padding: 0;
+}
+
+.feature1 p.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,1);
+  margin: 0px;
+  color: #FFF;
+}
+
 
 /* ============================= */
 /* ! Layout for mobile version   */

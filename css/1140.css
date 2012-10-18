@@ -87,6 +87,8 @@ img {
 	height: auto;
 }
 
+/*Size & Vertical Rhythm*/
+body{font-size:87.5%;font-size:14px;line-height:1.58em;}
 
 /* Smaller screens */
 
