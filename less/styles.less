@@ -39,12 +39,27 @@
   box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
 }
 
-.rounded-corners (@radius: 5px) {
+.rounded(@radius: 5px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
-  -ms-border-radius: @radius;
-  -o-border-radius: @radius;
   border-radius: @radius;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
 }
 
 .columns(@colcount: 3, @colgap: 1em) {
@@ -55,6 +70,13 @@
 	column-count: @colcount;
 	column-gap: @colgap;
 }
+
+@border: 1px solid gray;
+
+.border {
+  border: @border;
+}
+
 
 
 
@@ -92,7 +114,7 @@
   margin: 0;
   height: 1.5em;
   .opacity(0.5);
-  .rounded-corners;
+  .rounded;
   float: right;
   
   li {
@@ -128,10 +150,6 @@ nav.inline ul {
 }
 
 
-.border {
-  border: 1px solid gray;
-}
-
 
 
 .feature1 {
@@ -158,29 +176,65 @@ nav.inline ul {
 
 
 #tabs {
-  .rounded-corners;
+  .rounded;
   .border;
   padding: 0;
+  margin-left: 1em;
   
   .ui-tabs-nav {
     .opacity;
-    border-bottom: 1px solid #000;
+    border-bottom: @border;
+    padding: 0;
+    
+    
+    li {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .ui-tabs-active {
+    
+      
+      a {
+        background-color: #ccc;
+      }
+      
+      &:first-child a {
+        .border-radius(0,0,0,5px);
+      }
+    }
   }
   
   .ui-tabs-panel {
+    padding: 0;
   
   ul {
     list-style: none;
+    margin: 0;
     
     li {
       position: relative;
-      .gradient;
-      .border;
-      padding: 1em;
+      border-bottom: @border;
+      margin: 0;
+      
+      &.last {
+        border-bottom: none;
+        
+        a {
+          .border-radius(0,5px,5px,0);
+        }
+      }
       
       a {
+        padding: 1em;
+        .gradient;
         color: #000;
         text-decoration: none;
+        display: block;
+        
+        &:hover {
+          .gradient(@start: #CCC, @end: #EEE);
+        }
         
         h2 {
           font-size: 1.2em;
@@ -260,13 +314,13 @@ nav.inline ul {
   background-color: lighten(@blue, 70%);
   padding: 1em;
   margin: 0 1em 0 0;
-  .rounded-corners;
+  .rounded;
 }
 
 #mission-footer {
   background-color: darken(@blue, 20%);
   padding: 1em;
-  .rounded-corners;
+  .rounded;
   .opacity(0.3);
   
   img {
