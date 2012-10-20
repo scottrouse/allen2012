@@ -1,19 +1,46 @@
 /* ============================== */
 /* ! Layout for desktop version   */
 /* ============================== */
-/*
-
-	body {
-		background: url(../img/bg.jpg);
-		background-size: 100%;
-		background-attachment: fixed;
-	}
-*/
-
-#page {
-  background-color: #003373;
+body {
+  background: url(../img/bg.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
 }
-
+#primarynav ul {
+  width: 100%;
+  margin: 0;
+  height: 49px;
+  text-transform: uppercase;
+  background: #003373;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #003e8d), color-stop(1, #004aa6));
+  background: -ms-linear-gradient(bottom, #003e8d, #004aa6);
+  background: -moz-linear-gradient(center bottom, #003e8d 0%, #004aa6 100%);
+  font-size: 1.1em;
+}
+#primarynav ul li {
+  display: block;
+}
+#primarynav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.flexslider li {
+  margin-bottom: 0;
+}
+#secondarynav ul {
+  margin: 0;
+  height: 1.5em;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#secondarynav ul li {
+  margin: 0 1em;
+}
+#page {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
 #logo {
   display: block;
   overflow: hidden;
@@ -23,66 +50,110 @@
   width: 100%;
   height: 96px;
 }
-
-
 nav.inline ul {
   list-style: none;
 }
-
 nav.inline ul li {
   float: left;
   margin: 1em;
 }
-
-
 .border {
   border: 1px solid gray;
 }
-
-
-
 .feature1 {
   position: relative;
   margin-bottom: 1em;
 }
-
 .feature1 img {
   margin: 0;
   padding: 0;
 }
-
 .feature1 p.caption {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0,0,0,1);
+  background-color: #000000;
   margin: 0px;
   color: #FFF;
 }
-
-
+#social ul {
+  list-style: none;
+}
+#social ul li a.facebook:before {
+  content: url(../img/facebook.png);
+}
+#social ul li a.linkedin:before {
+  content: url(../img/linkedin.png);
+}
+#social ul li a.twitter:before {
+  content: url(../img/twitter.png);
+}
+#social ul li a.vimeo:before {
+  content: url(../img/vimeo.png);
+}
+#social ul li a.smugmug:before {
+  content: url(../img/smugmug.png);
+}
+#social ul li a.youtube:before {
+  content: url(../img/youtube.png);
+}
+#social ul li a.googleplus:before {
+  content: url(../img/googleplus.png);
+}
+.feature2 {
+  background-color: #d9eaff;
+  padding: 1em;
+  margin: 0 1em 0 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+#mission-footer {
+  background-color: #00060d;
+  padding: 1em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#mission-footer img {
+  width: 100%;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/*
+.clearfix {
+	display: inline-block;
+}
+*/
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
 /* ============================= */
 /* ! Layout for mobile version   */
 /* ============================= */
-
 @media handheld, only screen and (max-width: 767px) {
-
-	body {
-		
-	}
-
+  
 }
-
-
 /* ========================================== */
 /* ! Provide higher res assets for iPhone 4   */
 /* ========================================== */
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
-
-/*	.logo {
-		background: url(logo2x.jpg) no-repeat;
-		background-size: 212px 303px;
-	}*/
-
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  /*	.logo {
+  		background: url(logo2x.jpg) no-repeat;
+  		background-size: 212px 303px;
+  	}*/
 }

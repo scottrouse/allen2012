@@ -24,6 +24,17 @@
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 	
 	<script src="js/holder/holder.js"></script>
+	
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	
+	<!-- Place in the <head>, after the three links -->
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+      $('.flexslider').flexslider();
+    });
+  </script>
 
 </head>
 
@@ -83,7 +94,22 @@
         </nav>
       </div>
       <div class="row">
-        <img src="img/1200x600.gif">
+        <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="img/slides/banner-attention.jpg" />
+          </li>
+          <li>
+            <img src="img/slides/banner-pe2.jpg" />
+          </li>
+          <li>
+            <img src="img/slides/banner-rigor.jpg" />
+          </li>
+          <li>
+            <img src="img/slides/banner-safe.jpg" />
+          </li>
+        </ul>
+        </div>
       </div>
       <div class="row">
         <div class="threecol">
@@ -97,17 +123,19 @@
           </div>
         </div>
         <div class="ninecol last">
-          <div class="fourcol">
-            <img src="img/800x400.gif">
-            <p class="caption">Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing elit</a>. Ut ante ipsum, egestas vitae malesuada et.</p>
-          </div>
-          <div class="fourcol">
-            <img src="img/800x400.gif">
-            <p class="caption">Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing elit</a>. Ut ante ipsum, egestas vitae malesuada et.</p>
-          </div>
-          <div class="fourcol last">
-            <img src="img/800x400.gif">
-            <p class="caption">Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing elit</a>. Ut ante ipsum, egestas vitae malesuada et.</p>
+          <div class="feature2 clearfix">
+            <div class="fourcol">
+              <img src="img/800x400.gif">
+              <p class="caption">Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing elit</a>. Ut ante ipsum, egestas vitae malesuada et.</p>
+            </div>
+            <div class="fourcol">
+              <img src="img/800x400.gif">
+              <p class="caption">Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing elit</a>. Ut ante ipsum, egestas vitae malesuada et.</p>
+            </div>
+            <div class="fourcol last">
+              <img src="img/800x400.gif">
+              <p class="caption">Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing elit</a>. Ut ante ipsum, egestas vitae malesuada et.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -119,19 +147,22 @@
           <img src="img/800x400.gif">
         </div>
       </div>
+    </div>
       <div class="row">
         <div class="fourcol">
-          <div class="sixcol">
-            <img src="img/logo-sm.png">
-            
-          </div>
-          <div class="sixcol last">
-            <p>The mission of Allen Academy is to educate young people—intellectually, aesthetically, socially, physically, and morally—so they become responsible, contributing citizens and fulfilled individuals.</p>
+          <div id="mission-footer" class="clearfix">
+            <div class="sixcol">
+              <img src="img/allenbuilding.svg">
+              
+            </div>
+            <div class="sixcol last">
+              <p>The mission of Allen Academy is to educate young people—intellectually, aesthetically, socially, physically, and morally—so they become responsible, contributing citizens and fulfilled individuals.</p>
+            </div>
           </div>
         </div>
         <div class="sixcol">
           <h3>Find Us Online</h3>
-          <nav>
+          <nav id="social">
             <ul>
               <li>
                 <a href="#" class="facebook">Facebook</a>
@@ -176,10 +207,9 @@
             </ul>
         </div>
       </div>
-    </div>
     <div class="row">
       <div class="fourcol">
-        <p>3201 Boonville Rd; Bryan, TX 77802 | P: (979) 776-0731 | F: (979) 774-7769 <a href="#">info@allenacademy.org</a></p>
+        <p>3201 Boonville Rd; Bryan, TX 77802<br>P: (979) 776-0731 | F: (979) 774-7769<br><a href="#">info@allenacademy.org</a></p>
       </div>
       <div class="fourcol">
         <p>&copy; Allen Academy - A College Preparatory School</p>

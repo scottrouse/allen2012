@@ -1,0 +1,256 @@
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+	body {
+		background: url(../img/bg.jpg);
+		background-size: 100%;
+		background-attachment: fixed;
+	}
+
+
+
+
+@blue: #003373;
+@white: #FFFFFF;
+
+.opacity(@alpha: 0.1) {
+  background-color: rgba(0,0,0,@alpha); 
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+}
+
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+
+
+#primarynav ul {
+  width: 100%;
+  margin: 0;
+  height: 49px;
+  text-transform: uppercase;
+  .gradient(@blue, lighten(@blue, 5%), lighten(@blue, 10%));
+  font-size: 1.1em;
+  
+  
+  li {
+    display: block;
+    
+    a {
+      color: @white;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.flexslider li {
+  margin-bottom: 0;
+}
+
+
+#secondarynav ul {
+  margin: 0;
+  height: 1.5em;
+  .opacity;
+  
+  li {
+    margin: 0 1em;
+  }
+}
+
+
+#page {
+  background-color: @white;
+  .drop-shadow;
+}
+
+#logo {
+  display: block;
+  overflow: hidden;
+  background: url(../img/logo.png) no-repeat;
+  text-indent: -9999px;
+  background-size: contain;
+  width: 100%;
+  height: 96px;
+}
+
+
+nav.inline ul {
+  list-style: none;
+  
+  li {
+  float: left;
+  margin: 1em;
+  }
+}
+
+
+.border {
+  border: 1px solid gray;
+}
+
+
+
+.feature1 {
+  position: relative;
+  margin-bottom: 1em;
+
+    img {
+  margin: 0;
+  padding: 0;
+  }
+}
+
+.feature1 p.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,1);
+  margin: 0px;
+  color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+#social {
+  ul {
+    list-style: none;
+    li {
+      a {
+        &.facebook:before {
+          content: url(../img/facebook.png);
+        }
+        &.linkedin:before {
+          content: url(../img/linkedin.png);
+        }
+        &.twitter:before {
+          content: url(../img/twitter.png);
+        }
+        &.vimeo:before {
+          content: url(../img/vimeo.png);
+        }
+        &.smugmug:before {
+          content: url(../img/smugmug.png);
+        }
+        &.youtube:before {
+          content: url(../img/youtube.png);
+        }
+        &.googleplus:before {
+          content: url(../img/googleplus.png);
+        }
+        &:hover {
+          
+        }
+      }
+    }
+  }
+}
+
+
+
+.feature2 {
+  background-color: lighten(@blue, 70%);
+  padding: 1em;
+  margin: 0 1em 0 0;
+  .rounded-corners;
+}
+
+#mission-footer {
+  background-color: darken(@blue, 20%);
+  padding: 1em;
+  .rounded-corners;
+  .opacity(0.3);
+  
+  img {
+    width: 100%;
+  }
+}
+
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+/*
+.clearfix {
+	display: inline-block;
+}
+*/
+
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+ 
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		
+	}
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}
