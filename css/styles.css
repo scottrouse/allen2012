@@ -30,7 +30,7 @@ body {
 #secondarynav ul {
   margin: 0;
   height: 1.5em;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #secondarynav ul li {
   margin: 0 1em;
@@ -75,6 +75,14 @@ nav.inline ul li {
   background-color: #000000;
   margin: 0px;
   color: #FFF;
+}
+#social {
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
 }
 #social ul {
   list-style: none;

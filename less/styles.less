@@ -39,8 +39,6 @@
   box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
 }
 
-
-
 .rounded-corners (@radius: 5px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
@@ -48,6 +46,19 @@
   -o-border-radius: @radius;
   border-radius: @radius;
 }
+
+.columns(@colcount: 3, @colgap: 1em) {
+	-moz-column-count: @colcount;
+	-moz-column-gap: @colgap;
+	-webkit-column-count: @colcount;
+	-webkit-column-gap: @colgap;
+	column-count: @colcount;
+	column-gap: @colgap;
+}
+
+
+
+
 
 
 
@@ -80,7 +91,7 @@
 #secondarynav ul {
   margin: 0;
   height: 1.5em;
-  .opacity;
+  .opacity(0.5);
   
   li {
     margin: 0 1em;
@@ -150,6 +161,8 @@ nav.inline ul {
 
 
 #social {
+	.columns;
+
   ul {
     list-style: none;
     li {
