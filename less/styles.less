@@ -92,9 +92,12 @@
   margin: 0;
   height: 1.5em;
   .opacity(0.5);
+  .rounded-corners;
+  float: right;
   
   li {
     margin: 0 1em;
+    float: left;
   }
 }
 
@@ -154,6 +157,49 @@ nav.inline ul {
 
 
 
+#tabs {
+  .rounded-corners;
+  .border;
+  padding: 0;
+  
+  .ui-tabs-nav {
+    .opacity;
+    border-bottom: 1px solid #000;
+  }
+  
+  .ui-tabs-panel {
+  
+  ul {
+    list-style: none;
+    
+    li {
+      position: relative;
+      .gradient;
+      .border;
+      padding: 1em;
+      
+      a {
+        color: #000;
+        text-decoration: none;
+        
+        h2 {
+          font-size: 1.2em;
+          color: @blue;
+          margin-top: 0;
+        }
+        
+        img {
+          width: 75px;
+          height: 75px;
+          float: left;
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}
+}
+
 
 
 
@@ -162,11 +208,23 @@ nav.inline ul {
 
 #social {
 	.columns;
+	
+	color: @blue;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  
+  span {
+    margin-right: 0.5qem;
+  }
 
   ul {
     list-style: none;
     li {
       a {
+        text-decoration: none;
+        color: @blue;
+      
+      
         &.facebook:before {
           content: url(../img/facebook.png);
         }

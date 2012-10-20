@@ -19,20 +19,26 @@
 	<!-- Your styles -->
 	<link rel="stylesheet" href="css/taf-librarysci-m.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/social_foundicons.css">
 	
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 	
 	<script src="js/holder/holder.js"></script>
 	
+	<link href="css/no-theme/jquery-ui-1.9.0.custom.css" rel="stylesheet">
+	<script src="js/jquery-1.8.2.js"></script>
+	<script src="js/jquery-ui-1.9.0.custom.js"></script>
+	
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
 	<script src="js/jquery.flexslider.js"></script>
 	
 	<!-- Place in the <head>, after the three links -->
   <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
       $('.flexslider').flexslider();
+      $( "#tabs" ).tabs();
     });
   </script>
 
@@ -141,7 +147,109 @@
       </div>
       <div class="row">
         <div class="sixcol">
-          <p>news and events here</p>
+          <div id="tabs">
+          	<ul>
+          		<li><a href="#tabs-1">News</a></li>
+          		<li><a href="#tabs-2">Events</a></li>
+          		<li><a href="#tabs-3">Blog Posts</a></li>
+          	</ul>
+          	<div id="tabs-1">
+            	<ul>
+            	 <li class="first odd">
+            	   <a href="#">
+              	   <h2>News1 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="even">
+            	   <a href="#">
+              	   <h2>News2 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="odd">
+            	   <a href="#">
+              	   <h2>News3 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="last even">
+            	   <a href="#">
+              	   <h2>Lorem Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	</ul>
+          	</div>
+          	<div id="tabs-2">
+            	<ul>
+            	 <li class="first odd">
+            	   <a href="#">
+              	   <h2>Events1 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="even">
+            	   <a href="#">
+              	   <h2>Events1 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="odd">
+            	   <a href="#">
+              	   <h2>Events2 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="last even">
+            	   <a href="#">
+              	   <h2>Lorem Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	</ul>
+            </div>
+          	<div id="tabs-3">
+            	<ul>
+            	 <li class="first odd">
+            	   <a href="#">
+              	   <h2>Blog1 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="even">
+            	   <a href="#">
+              	   <h2>Blog2 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="odd">
+            	   <a href="#">
+              	   <h2>Blog3 Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	 <li class="last even">
+            	   <a href="#">
+              	   <h2>Lorem Ipsum Dolor Sit Amet</h2>
+              	   <img src="img/250x250.gif">
+              	   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            	   </a>
+            	 </li>
+            	</ul>
+          	</div>
+          </div>
         </div>
         <div class="sixcol last">
           <img src="img/800x400.gif">
@@ -165,25 +273,22 @@
           <nav id="social">
             <ul>
               <li>
-                <a href="#" class="facebook">Facebook</a>
+                <a href="#" class="foundicon-facebook"> Facebook</a>
               </li>
               <li>
-                <a href="#" class="linkedin">LinkedIn</a>
+                <a href="#" class="foundicon-linkedin"> LinkedIn</a>
               </li>
               <li>
-                <a href="#" class="twitter">Twitter</a>
+                <a href="#" class="foundicon-twitter"> Twitter</a>
               </li>
               <li>
-                <a href="#" class="vimeo">Vimeo</a>
+                <a href="#" class="foundicon-vimeo"> Vimeo</a>
               </li>
               <li>
-                <a href="#" class="smugmug">SmugMug</a>
+                <a href="#" class="foundicon-youtube"> YouTube</a>
               </li>
               <li>
-                <a href="#" class="youtube">YouTube</a>
-              </li>
-              <li>
-                <a href="#" class="googleplus">Google+</a>
+                <a href="#" class="foundicon-google-plus"> Google+</a>
               </li>
             </ul>
           </nav>
@@ -193,16 +298,16 @@
             <h3>Resources</h3>
             <ul>
               <li>
-                <a href="#">Link</a>
+                <a href="#">Renweb</a>
               </li>
               <li>
-                <a href="#">Link</a>
+                <a href="#">FACTS</a>
               </li>
               <li>
-                <a href="#">Link</a>
+                <a href="#">Allen Webmail</a>
               </li>
               <li>
-                <a href="#">Link</a>
+                <a href="#">Employment</a>
               </li>
             </ul>
         </div>
