@@ -81,6 +81,19 @@
 
 
 
+a {
+  color: @blue;
+
+  &:hover {
+    
+  }
+  
+  &:visited {
+    color: @blue;
+  }
+
+}
+
 
 
 
@@ -120,6 +133,11 @@
   li {
     margin: 0 1em;
     float: left;
+    
+    a {
+      color: #FFF;
+      text-decoration: none;
+    }
   }
 }
 
@@ -181,16 +199,31 @@ nav.inline ul {
   padding: 0;
   margin-left: 1em;
   
+  .more-links {
+    text-align: right;
+    
+    a {
+      text-decoration: none;
+      margin: 0.2em 1em 0.2em 0;
+    }
+  }
+  
   .ui-tabs-nav {
     .opacity;
     border-bottom: @border;
     padding: 0;
+    font-size: 1.1em;
+    text-transform: uppercase;
     
     
     li {
       margin: 0;
       padding: 0;
     }
+    
+      a:hover {
+        background-color: #EEE;
+      }
     
     .ui-tabs-active {
     
@@ -217,6 +250,7 @@ nav.inline ul {
       border-bottom: @border;
       margin: 0;
       
+/*
       &.last {
         border-bottom: none;
         
@@ -224,13 +258,22 @@ nav.inline ul {
           .border-radius(0,5px,5px,0);
         }
       }
+*/
       
       a {
-        padding: 1em;
+        padding: 0 1em 0 0;
         .gradient;
         color: #000;
         text-decoration: none;
         display: block;
+        height: 75px;
+        overflow: hidden;
+        
+        p {
+          margin: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
         
         &:hover {
           .gradient(@start: #CCC, @end: #EEE);
@@ -239,7 +282,7 @@ nav.inline ul {
         h2 {
           font-size: 1.2em;
           color: @blue;
-          margin-top: 0;
+          margin: 0.2em 0;
         }
         
         img {
