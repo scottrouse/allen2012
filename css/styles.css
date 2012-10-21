@@ -2,9 +2,16 @@
 /* ! Layout for desktop version   */
 /* ============================== */
 body {
-  background: url(../img/bg.jpg);
-  background-size: 100%;
-  background-attachment: fixed;
+  /*
+background: url(../img/bg.jpg);
+		background-size: 100%;
+		background-attachment: fixed;
+*/
+
+  background: #003373;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #003373), color-stop(1, #00285a));
+  background: -ms-linear-gradient(bottom, #003373, #00285a);
+  background: -moz-linear-gradient(center bottom, #003373 0%, #00285a 100%);
 }
 .border {
   border: 1px solid #808080;
@@ -15,10 +22,11 @@ a {
 a:visited {
   color: #003373;
 }
-#primarynav ul {
+#primarynav {
   width: 100%;
   margin: 0;
-  height: 49px;
+  /* height: 49px; */
+
   text-transform: uppercase;
   background: #003373;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #003e8d), color-stop(1, #004aa6));
@@ -26,15 +34,28 @@ a:visited {
   background: -moz-linear-gradient(center bottom, #003e8d 0%, #004aa6 100%);
   font-size: 1.1em;
 }
+#primarynav ul {
+  margin: 0;
+}
 #primarynav ul li {
   display: block;
+  margin: 0;
 }
 #primarynav ul li a {
   color: #ffffff;
   text-decoration: none;
+  text-shadow: -1px -1px 0px #000000;
+  padding: 1em;
+  display: block;
+}
+#primarynav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .flexslider li {
   margin-bottom: 0;
+}
+#secondarynav {
+  margin: 15px 0;
 }
 #secondarynav ul {
   margin: 0;
@@ -65,11 +86,13 @@ a:visited {
 #logo {
   display: block;
   overflow: hidden;
-  background: url(../img/logo.png) no-repeat;
+  background: url(../img/allen-logo-white.svg) no-repeat;
   text-indent: -9999px;
   background-size: contain;
   width: 100%;
   height: 96px;
+  margin: 10px 0;
+  padding: 0;
 }
 nav.inline ul {
   list-style: none;
@@ -80,7 +103,17 @@ nav.inline ul li {
 }
 .feature1 {
   position: relative;
-  margin-bottom: 1em;
+  margin: 0 1em 1em 1em;
+  border: 1px solid #808080;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .feature1 img {
   margin: 0;
@@ -93,6 +126,9 @@ nav.inline ul li {
   background-color: #000000;
   margin: 0px;
   color: #FFF;
+}
+.feature3 {
+  margin: 0 1em;
 }
 #tabs {
   -webkit-border-radius: 5px;
@@ -203,25 +239,29 @@ nav.inline ul li {
   margin-right: 1em;
 }
 #social {
+  color: #ffffff;
+  /* text-shadow: 1px 1px 1px rgba(0,0,0,0.2); */
+
+  text-shadow: -1px -1px 0px #000000;
+}
+#social nav {
+  font-size: 1.3em;
+}
+#social span {
+  margin-right: 0.5qem;
+}
+#social ul {
   -moz-column-count: 3;
   -moz-column-gap: 1em;
   -webkit-column-count: 3;
   -webkit-column-gap: 1em;
   column-count: 3;
   column-gap: 1em;
-  color: #003373;
-  font-size: 1.3em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-#social span {
-  margin-right: 0.5qem;
-}
-#social ul {
   list-style: none;
 }
 #social ul li a {
   text-decoration: none;
-  color: #003373;
+  color: #ffffff;
 }
 #social ul li a.facebook:before {
   content: url(../img/facebook.png);
@@ -244,16 +284,28 @@ nav.inline ul li {
 #social ul li a.googleplus:before {
   content: url(../img/googleplus.png);
 }
+#resources {
+  color: #ffffff;
+  text-shadow: -1px -1px 0px #000000;
+}
+#resources a {
+  color: #ffffff;
+  text-decoration: none;
+}
 .feature2 {
   background-color: #d9eaff;
   padding: 1em;
-  margin: 0 1em 0 0;
+  margin: 0 1em 1em 1em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  border: 1px solid #808080;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 #mission-footer {
   background-color: #00060d;
@@ -265,9 +317,14 @@ nav.inline ul li {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-shadow: -1px -1px 0px #000000;
 }
 #mission-footer img {
   width: 100%;
+}
+#mission-footer p {
+  margin: 0;
 }
 .clearfix:after {
   content: ".";
@@ -288,11 +345,33 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%;
 }
+#footer {
+  margin-top: 1em;
+}
+#footer h3 {
+  font-size: 1.3em;
+}
+#page-bottom {
+  color: #ffffff;
+  text-shadow: -1px -1px 0px #000000;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 1em auto;
+}
+#page-bottom p {
+  margin: 0;
+}
+#page-bottom a {
+  color: #ffffff;
+}
 /* ============================= */
 /* ! Layout for mobile version   */
 /* ============================= */
 @media handheld, only screen and (max-width: 767px) {
-  
+  #page-bottom,
+  .app-store {
+    text-align: center;
+  }
 }
 /* ========================================== */
 /* ! Provide higher res assets for iPhone 4   */

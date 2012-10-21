@@ -3,16 +3,23 @@
 /* ============================== */
 
 	body {
-		background: url(../img/bg.jpg);
+		/*
+background: url(../img/bg.jpg);
 		background-size: 100%;
 		background-attachment: fixed;
+*/
+  
+	.gradient(@blue, @blue, darken(@blue, 5%));
+	
 	}
 
 
 
 
 @blue: #003373;
+@red: #7A0000;
 @white: #FFFFFF;
+@black: #000000;
 
 .opacity(@alpha: 0.1) {
   background-color: rgba(0,0,0,@alpha); 
@@ -77,6 +84,9 @@
   border: @border;
 }
 
+.letterpress(@press: @black) {
+  text-shadow: -1px -1px 0px @press;
+}
 
 
 
@@ -98,22 +108,33 @@ a {
 
 
 
-#primarynav ul {
+#primarynav {
   width: 100%;
   margin: 0;
-  height: 49px;
+  /* height: 49px; */
   text-transform: uppercase;
   .gradient(@blue, lighten(@blue, 5%), lighten(@blue, 10%));
   font-size: 1.1em;
   
-  
-  li {
-    display: block;
-    
-    a {
-      color: @white;
-      text-decoration: none;
-    }
+  ul {
+    margin: 0;
+
+    li {
+      display: block;
+      margin: 0;
+      
+      a {
+        color: @white;
+        text-decoration: none;
+        .letterpress;
+        padding: 1em;
+        display: block;
+        
+        &:hover {
+          background-color: rgba(0,0,0,0.2);
+        }
+      }
+    } 
   }
 }
 
@@ -123,7 +144,10 @@ a {
 }
 
 
-#secondarynav ul {
+#secondarynav {
+  margin: 15px 0;
+
+  ul {
   margin: 0;
   height: 1.5em;
   .opacity(0.5);
@@ -140,6 +164,7 @@ a {
     }
   }
 }
+}
 
 
 #page {
@@ -150,11 +175,13 @@ a {
 #logo {
   display: block;
   overflow: hidden;
-  background: url(../img/logo.png) no-repeat;
+  background: url(../img/allen-logo-white.svg) no-repeat;
   text-indent: -9999px;
   background-size: contain;
   width: 100%;
   height: 96px;
+  margin: 10px 0;
+  padding: 0;
 }
 
 
@@ -172,8 +199,11 @@ nav.inline ul {
 
 .feature1 {
   position: relative;
-  margin-bottom: 1em;
-
+  margin: 0 1em 1em 1em;
+  .border;
+  .rounded;
+  .drop-shadow;
+  
     img {
   margin: 0;
   padding: 0;
@@ -189,7 +219,9 @@ nav.inline ul {
   color: #FFF;
 }
 
-
+.feature3 {
+  margin: 0 1em;
+}
 
 
 
@@ -304,22 +336,26 @@ nav.inline ul {
 
 
 #social {
-	.columns;
 	
-	color: @blue;
-  font-size: 1.3em;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	color: @white;
+  /* text-shadow: 1px 1px 1px rgba(0,0,0,0.2); */
+  .letterpress;
+  
+  nav {
+    font-size: 1.3em;
+  }
   
   span {
     margin-right: 0.5qem;
   }
 
   ul {
+	 .columns;
     list-style: none;
     li {
       a {
         text-decoration: none;
-        color: @blue;
+        color: @white;
       
       
         &.facebook:before {
@@ -353,11 +389,24 @@ nav.inline ul {
 
 
 
+#resources {
+  color: @white;
+  .letterpress;
+  
+  a {
+    color: @white;
+    text-decoration: none;
+  }
+}
+
+
 .feature2 {
   background-color: lighten(@blue, 70%);
   padding: 1em;
-  margin: 0 1em 0 0;
+  margin: 0 1em 1em 1em;
   .rounded;
+  .border;
+  .drop-shadow;
 }
 
 #mission-footer {
@@ -365,9 +414,15 @@ nav.inline ul {
   padding: 1em;
   .rounded;
   .opacity(0.3);
+  color: @white;
+  .letterpress;
   
   img {
     width: 100%;
+  }
+  
+  p {
+    margin: 0;
   }
 }
 
@@ -395,7 +450,35 @@ html[xmlns] .clearfix {
 * html .clearfix {
 	height: 1%;
 }
- 
+
+
+
+
+
+#footer {
+  margin-top: 1em;
+  
+  h3 {
+  font-size: 1.3em;
+  }
+}
+
+#page-bottom {
+  color: @white;
+  .letterpress;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 1em auto;
+  
+  p {
+    margin: 0;
+  }
+  
+  a {
+    color: @white;
+  }
+}
+
 
 /* ============================= */
 /* ! Layout for mobile version   */
@@ -405,6 +488,11 @@ html[xmlns] .clearfix {
 
 	body {
 		
+	}
+	
+	
+	#page-bottom, .app-store {
+  	text-align: center;
 	}
 
 }
