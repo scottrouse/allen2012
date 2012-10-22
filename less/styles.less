@@ -145,6 +145,17 @@ ul {
 
 
 
+
+#mobile-menu-container {
+  background-color: @red;
+  display: none;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+
 #primarynav {
   width: 100%;
   margin: 0;
@@ -651,6 +662,47 @@ html[xmlns] .clearfix {
   .logo {
     text-align: center;
   }
+  
+  #mobile-menu-container {
+  display: block;
+  font-size: 1.1em;
+  .letterpress;
+  
+  a {
+    color: @white;
+    text-decoration: none;
+  }
+  
+  #mobile-menu-link {
+    float: right;
+    padding: 1em;
+  }
+  
+  #mobile-menu {
+    clear: right;
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      
+      li {
+        margin: 0;
+        
+        a {
+          text-align: center;
+          .gradient(@red, lighten(@red, 5%), lighten(@red, 10%));
+          margin: 0;
+          padding: 1em 0;
+          display: block;
+          
+          &:hover {
+            .gradient(@red, darken(@red, 5%), darken(@red, 10%));
+          }
+        }
+      }
+    }
+  }
+}
 
 }
 
