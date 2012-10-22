@@ -69,6 +69,12 @@ background: url(../img/bg.jpg);
   box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
 }
 
+.no-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
 .rounded(@radius: 5px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
@@ -368,6 +374,7 @@ nav.inline ul {
   padding: 0;
   margin-left: 1em;
   margin-bottom: 1em;
+  background-color: @white;
   
   .more-links {
     text-align: right;
@@ -703,12 +710,17 @@ html[xmlns] .clearfix {
     }
   }
 
+
+}
+
   #primarynav, #secondarynav, #tertiarynav, .flexslider {
     display: none;
   }
 
-}
-
+  #page {
+    background: none;
+    .no-shadow;
+  }
 
 }
 
