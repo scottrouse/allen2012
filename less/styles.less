@@ -133,6 +133,15 @@ a {
 }
 
 
+ul {
+  li {
+    margin-left: 1.5em;
+  }
+}
+
+
+
+
 
 
 
@@ -280,7 +289,7 @@ a {
 #logo {
   display: block;
   overflow: hidden;
-  background: url(../img/allen-logo-white.svg) no-repeat;
+  background: url(../img/allen-logo-white.svg) no-repeat center center;
   text-indent: -9999px;
   background-size: contain;
   width: 100%;
@@ -305,7 +314,7 @@ nav.inline ul {
 
 .feature1 {
   position: relative;
-  margin: 0 1em 1em 1em;
+  margin: 0 0 1em 1em;
   .border;
   .rounded;
   .drop-shadow;
@@ -314,9 +323,14 @@ nav.inline ul {
   margin: 0;
   padding: 0;
   }
+  
+  p {
+    padding: 0 0.3em;
+    margin: 0;
+  }
 }
 
-.feature1 p.caption {
+.feature1 .caption {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -326,7 +340,7 @@ nav.inline ul {
 }
 
 .feature3 {
-  margin: 0 1em;
+  margin-right: 1em;
 }
 
 
@@ -336,6 +350,7 @@ nav.inline ul {
   .border;
   padding: 0;
   margin-left: 1em;
+  margin-bottom: 1em;
   
   .more-links {
     text-align: right;
@@ -446,6 +461,7 @@ nav.inline ul {
 	color: @white;
   /* text-shadow: 1px 1px 1px rgba(0,0,0,0.2); */
   .letterpress;
+  margin-bottom: 1em;
   
   nav {
     font-size: 1.3em;
@@ -459,6 +475,7 @@ nav.inline ul {
 	 .columns;
     list-style: none;
     li {
+      margin-left: 0;
       a {
         text-decoration: none;
         color: @white;
@@ -509,7 +526,7 @@ nav.inline ul {
 .feature2 {
   background-color: lighten(@blue, 70%);
   padding: 1em;
-  margin: 0 1em 1em 1em;
+  margin: 0 1em 1em 0;
   .rounded;
   .border;
   .drop-shadow;
@@ -522,6 +539,7 @@ nav.inline ul {
   .opacity(0.3);
   color: @white;
   .letterpress;
+  margin-bottom: 1em;
   
   img {
     width: 100%;
@@ -614,6 +632,19 @@ html[xmlns] .clearfix {
 	#page-bottom, .app-store {
   	text-align: center;
 	}
+
+	.feature3, .feature1, .feature2, #tabs {
+  margin-right: 0;
+  margin-left: 0;
+}
+  
+  .flexslider {
+    font-size: 0.7em;
+  }
+  
+  .logo {
+    text-align: center;
+  }
 
 }
 
