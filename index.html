@@ -80,6 +80,48 @@
   });
  </script>
 
+<script type="text/javascript">
+// Can also be used with $(document).ready()
+$(window).load(function() {
+ 
+  // Vimeo API nonsense
+  var player = document.getElementById('player_1');
+  $f(player).addEvent('ready', ready);
+ 
+  function addEvent(element, eventName, callback) {
+    if (element.addEventListener) {
+      element.addEventListener(eventName, callback, false)
+    } else {
+      element.attachEvent(eventName, callback, false);
+    }
+  }
+ 
+  function ready(player_id) {
+    var froogaloop = $f(player_id);
+    froogaloop.addEvent('play', function(data) {
+      $('.flexslider').flexslider("pause");
+    });
+    froogaloop.addEvent('pause', function(data) {
+      $('.flexslider').flexslider("play");
+    });
+  }
+ 
+   
+  // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+  $(".flexslider")
+    .fitVids()
+    .flexslider({
+      animation: "slide",
+      useCSS: false,
+      animationLoop: false,
+      smoothHeight: true,
+      before: function(slider){
+        $f(player).api('pause');
+      }
+  });
+});
+</script>
+
   <div id="mobile-menu-container" class="clearfix">
     <a href="#" id="mobile-menu-link" class="closed"><i class="icon-reorder"></i> Menu</a>
     <nav id="mobile-menu">
@@ -163,6 +205,9 @@
               <h3><a href="#">Slide 1 Title</a></h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Read more...</a></p>
             </div>
+          </li>
+          <li>
+            <iframe id="player_1" src="http://player.vimeo.com/video/1084537?api=1&player_id=player_1" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
           </li>
           <li>
             <img src="img/slides/slide-2.jpg" />
